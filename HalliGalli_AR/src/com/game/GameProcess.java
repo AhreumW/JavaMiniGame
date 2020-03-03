@@ -43,7 +43,7 @@ public class GameProcess extends GameSetting {
 		rules.divideCards();	//카드 나눠줌
 		
 		rules.drawPlayDeck();	//플레이어들의 카드덱 출력
-		System.out.println("턴을 넘기려면 x를, 종을 치려거든 z를 눌러주세요.(처음 시작도 x를 눌러주세요.)");
+//		System.out.println("턴을 넘기려면 x를, 종을 치려거든 z를 눌러주세요.(처음 시작도 x를 눌러주세요.)");
 		
 		//한 명의 탈락자가 나올때까지
 		while(rules.makePlayers.getPlayerCardMap().get(0).isEmpty() != true &&
@@ -51,7 +51,7 @@ public class GameProcess extends GameSetting {
 				rules.makePlayers.getPlayerCardMap().get(2).isEmpty() != true &&
 				rules.makePlayers.getPlayerCardMap().get(3).isEmpty() != true ) {
 			
-			gp.infoOrder(order); //순서를 알려줌
+			gp.infoOrder(order, turnCount); //순서를 알려줌
 			
 			Scanner scan = new Scanner(System.in);
 			String input = scan.nextLine();		//종칠거니? z:true x:false

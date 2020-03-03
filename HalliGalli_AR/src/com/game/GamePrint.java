@@ -86,13 +86,22 @@ public class GamePrint extends GameSetting {
 		user.setOrder(userOrder);	
 	}
 	
-	void infoOrder(int order){		//순서 안내
+	void infoOrder(int order, int turnCount){		//순서 안내
 		//System.out.println();
 		if(order == user.getOrder()) {
-			System.out.println(user.getId()+"님의 차례입니다.");
+			System.out.print("다음은 "+user.getId()+"님이 카드를 오픈합니다.");
 		}else {
-			System.out.println((order+1) + "번째 플레이어 차례입니다.");
+			System.out.print("다음은 "+(order+1) + "번째 플레이어가 카드를 오픈합니다.");
 		}
+		
+		//첫 시작때만 다른 안내문 - 지저분한가???
+		if(turnCount == 0) {
+			System.out.println();
+			System.out.println("턴을 넘기려면 x를, 종을 치려거든 z를 눌러주세요.(처음 시작도 x를 눌러주세요.)");
+		}else {
+			System.out.println("(Pass:'z', Hit:'x')");
+		}
+		
 	}
 	
 }
