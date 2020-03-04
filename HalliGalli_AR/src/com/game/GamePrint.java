@@ -99,7 +99,7 @@ public class GamePrint extends GameSetting {
 			System.out.println();
 			System.out.println("턴을 넘기려면 x를, 종을 치려거든 z를 눌러주세요.(처음 시작도 x를 눌러주세요.)");
 		}else {
-			System.out.println("(Pass:'z', Hit:'x')");
+			System.out.println("Pass:'x', Hit:'z'");
 		}
 		
 	}
